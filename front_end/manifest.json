@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Liveness Redirect",
+  "version": "1.0",
+  "description": "Auto-redirect if spoof detected",
+  "host_permissions": [
+    "http://127.0.0.1:5000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
